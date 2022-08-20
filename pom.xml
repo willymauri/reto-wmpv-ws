@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.0.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <artifactId>reto-wmpv-ws</artifactId>
+	<groupId>ec.reto.wmpv.ws</groupId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>reto-wmpv-ws</name>
+    <description>Servicios Rest para WS Reto</description>
+
+    <organization>
+        <name>William Patino</name>
+        <url></url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>william.patino</id>
+            <name>William Patino</name>
+            <organization></organization>
+            <organizationUrl></organizationUrl>
+            <email>william.mpv.83@gmail.com</email>
+            <roles>
+                <role>Intregraciones</role>
+                <role>Desarrollo</role>
+            </roles>
+            <timezone>-5</timezone>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>reto-wmpv-ws-service</module>
+		<module>reto-wmpv-ws-persistence</module>
+    </modules>
+
+    <properties>
+        <jsonwebtoken.version>0.9.0</jsonwebtoken.version>
+        <ws.rs.api.version>2.1</ws.rs.api.version>
+        <json.version>20160810</json.version>
+        <base64.version>2.3.8</base64.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <java.version>11</java.version>
+        <webtoken.version>0.9.1</webtoken.version>
+        <wmpv-persistence.version>1.0.0-SNAPSHOT</wmpv-persistence.version>
+        <swagger.version>2.9.2</swagger.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>${json.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.ws.rs</groupId>
+                <artifactId>javax.ws.rs-api</artifactId>
+                <version>${ws.rs.api.version}</version>
+            </dependency>
+            <dependency>
+			    <groupId>com.google.code.gson</groupId>
+			    <artifactId>gson</artifactId>
+			    <version>${gson.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>io.jsonwebtoken</groupId>
+			    <artifactId>jjwt</artifactId>
+			    <version>${webtoken.version}</version>
+			</dependency>
+			<dependency>
+                <groupId>net.iharder</groupId>
+                <artifactId>base64</artifactId>
+                <version>${base64.version}</version>
+            </dependency>
+			<dependency>				
+				<artifactId>reto-wmpv-ws-persistence</artifactId>
+				<groupId>ec.reto.wmpv.ws.persistence</groupId>
+				<version>${wmpv-persistence.version}</version>
+			</dependency>
+			<dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-bean-validators</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
